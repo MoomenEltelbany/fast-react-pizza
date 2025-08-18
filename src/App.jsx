@@ -3,7 +3,8 @@ import AppLayout from "./ui/AppLayout";
 import Home from "./ui/Home";
 import Menu, { loader as menuLoader } from "./features/menu/Menu";
 import Cart from "./features/cart/Cart";
-import CartItem from "./features/cart/CartItem";
+import CreateOrder from "./features/order/CreateOrder";
+import OrderItem from "./features/order/OrderItem";
 
 const router = createBrowserRouter([
     {
@@ -23,8 +24,12 @@ const router = createBrowserRouter([
                 element: <Cart />,
             },
             {
-                path: "/cart/:id",
-                element: <CartItem />,
+                path: "/order/new",
+                element: <CreateOrder />,
+            },
+            {
+                path: "/order/:orderId",
+                element: <OrderItem />,
             },
         ],
     },
