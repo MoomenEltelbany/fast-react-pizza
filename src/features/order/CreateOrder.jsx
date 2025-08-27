@@ -103,7 +103,9 @@ function CreateOrder() {
                         name="cart"
                         value={JSON.stringify(cart)}
                     />
-                    <Button disabled={isSubmitting}>Order now</Button>
+                    <Button disabled={isSubmitting} type="primary">
+                        Order now
+                    </Button>
                 </div>
             </Form>
         </div>
