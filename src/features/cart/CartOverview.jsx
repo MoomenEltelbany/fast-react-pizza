@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
 import LinkButton from "../../ui/LinkButton";
-import { totalPizzaPrice, totalPizzaQuantity } from "./cartSlice";
+import { getTotalPizzaPrice, getTotalPizzaQuantity } from "./cartSlice";
 import { formatCurrency } from "../../utils/helpers";
 
 function CartOverview() {
-    const pizzaQuantity = useSelector(totalPizzaQuantity);
+    const pizzaQuantity = useSelector(getTotalPizzaQuantity);
 
-    const pizzaPrice = useSelector(totalPizzaPrice);
+    const pizzaPrice = useSelector(getTotalPizzaPrice);
 
     if (pizzaQuantity === 0) return null;
 
