@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart } from "./cartSlice";
-import CartItem from "./CartItem";
 import Button from "../../ui/Button";
+import LinkButton from "../../ui/LinkButton";
+import CartItem from "./CartItem";
+import EmptyCart from "./EmptyCart";
 
 function Cart() {
     const cart = useSelector(getCart);
@@ -15,14 +16,16 @@ function Cart() {
         dispatch(clearCart());
     }
 
+    if (!cart.length) return <EmptyCart />;
+
     return (
         <div className="px-4 py-3">
-            <Link
+            <LinkButton
                 to="/menu"
                 className="text-sm text-blue-500 hover:text-blue-600 hover:underline"
             >
                 &larr; Back to menu
-            </Link>
+            </LinkButton>
 
             <h2 className="mt-7 text-xl font-semibold">
                 Your cart, {userName}
