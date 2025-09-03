@@ -1,5 +1,6 @@
 import { formatCurrency } from "../../utils/helpers";
 import DeleteItem from "./DeleteItem";
+import UpdateItemQuantity from "./UpdateItemQuantity";
 
 // eslint-disable-next-line react/prop-types
 function CartItem({ item }) {
@@ -15,6 +16,7 @@ function CartItem({ item }) {
                 <p className="text-sm font-bold">
                     {formatCurrency(totalPrice)}
                 </p>
+                <UpdateItemQuantity />
                 <DeleteItem pizzaId={pizzaId} />
             </div>
         </li>
