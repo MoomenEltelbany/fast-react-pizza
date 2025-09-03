@@ -16,7 +16,7 @@ function CartItem({ item }) {
                 <p className="text-sm font-bold">
                     {formatCurrency(totalPrice)}
                 </p>
-                <UpdateItemQuantity />
+                <UpdateItemQuantity pizzaId={pizzaId} />
                 <DeleteItem pizzaId={pizzaId} />
             </div>
         </li>
