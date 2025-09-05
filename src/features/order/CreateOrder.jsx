@@ -30,9 +30,6 @@ function CreateOrder() {
         error: addressError,
     } = useSelector((state) => state.user);
 
-    console.log(position);
-    console.log(address);
-
     const isLoadingAddress = statusAddress === "loading";
 
     const cart = useSelector(getCart);
