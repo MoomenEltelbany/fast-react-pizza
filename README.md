@@ -16,22 +16,26 @@ A modern, responsive pizza ordering application built with React, Redux Toolkit,
 - **Sold Out Handling**: Clear indication of unavailable items
 
 ### 🛒 **Shopping Cart**
-- **Cart Management**: Add, remove, and update pizza quantities
-- **Price Calculation**: Real-time total price updates
-- **Cart Persistence**: Cart state maintained across navigation
+- **Cart Management**: Add, remove, and update pizza quantities with intuitive controls
+- **Price Calculation**: Real-time total price updates including priority pricing
+- **Cart Persistence**: Cart state maintained across navigation using Redux
 - **Empty Cart Handling**: Graceful empty cart state with call-to-action
+- **Quantity Controls**: Increase/decrease quantity directly from menu and cart
+- **Cart Overview**: Persistent cart summary in header with total items and price
 
 ### 📍 **Location Services**
-- **Geolocation Integration**: Automatic address detection using browser geolocation
-- **Address Validation**: Manual address input with validation
-- **Reverse Geocoding**: Convert coordinates to readable addresses
+- **Geolocation Integration**: One-click automatic address detection using browser geolocation API
+- **Address Validation**: Manual address input with form validation
+- **Reverse Geocoding**: Convert GPS coordinates to readable addresses using external geocoding service
+- **Location Error Handling**: Graceful fallback when geolocation fails or is denied
 
 ### 📋 **Order Management**
 - **Order Creation**: Comprehensive order form with validation
-- **Phone Validation**: Regex-based phone number validation
+- **Phone Validation**: Regex-based phone number validation with international format support
 - **Priority Orders**: Optional priority delivery with price adjustment (+20%)
-- **Order Tracking**: Real-time order status and details
-- **Order Search**: Find orders by ID
+- **Order Tracking**: Real-time order status and details with estimated delivery time
+- **Order Search**: Find orders by ID through search functionality
+- **Order Updates**: Ability to make existing orders priority after placement
 
 ### 🔄 **State Management**
 - **Redux Toolkit**: Centralized state management for cart and user data
@@ -52,9 +56,9 @@ A modern, responsive pizza ordering application built with React, Redux Toolkit,
 - **Prettier** - Code formatting with Tailwind plugin
 
 ### **APIs & Services**
-- **Pizza API** - External API for menu and order management
-- **Geolocation API** - Browser-based location services
-- **Geocoding API** - Address resolution services
+- **Pizza API** - External REST API (react-fast-pizza-api.jonas.io) for menu and order management
+- **Geolocation API** - Browser-based location services with position tracking
+- **Geocoding API** - BigDataCloud reverse geocoding service for address resolution
 
 ## 🚀 Getting Started
 
@@ -122,27 +126,32 @@ src/
 ## 🔧 Key Features Implementation
 
 ### Redux State Management
-- **User Slice**: Name storage and geolocation state
-- **Cart Slice**: Shopping cart with CRUD operations
-- **Async Thunks**: Geolocation fetching with error handling
+- **User Slice**: Username storage, geolocation state, and address management
+- **Cart Slice**: Complete shopping cart with add, remove, update, and clear operations
+- **Async Thunks**: Geolocation fetching with comprehensive error handling
+- **Selectors**: Optimized state selectors for cart totals and item quantities
 
 ### React Router Integration
-- **Loaders**: Data fetching before route rendering
-- **Actions**: Form submission handling
-- **Error Boundaries**: Graceful error handling
+- **Loaders**: Pre-route data fetching for menu and order details
+- **Actions**: Form submission handling for order creation and updates
+- **Error Boundaries**: Comprehensive error handling with user-friendly messages
+- **Navigation States**: Loading states during form submissions
 
 ### Responsive Design
-- **Mobile-First**: Optimized for mobile devices
-- **Tailwind CSS**: Utility classes for rapid styling
-- **Flexible Layouts**: Adapts to different screen sizes
+- **Mobile-First**: Fully optimized for mobile devices with touch-friendly interfaces
+- **Tailwind CSS**: Utility-first CSS with custom component styling
+- **Flexible Layouts**: Seamless adaptation across all screen sizes
+- **Interactive Elements**: Smooth transitions and hover effects
 
 ## 🌟 Advanced Features
 
-- **Form Validation**: Client-side validation with error messages
-- **Loading States**: Proper loading indicators for async operations
-- **Error Handling**: Comprehensive error boundaries and user feedback
-- **Performance**: Optimized rendering with proper state management
-- **Accessibility**: Semantic HTML and proper form labels
+- **Form Validation**: Client-side validation with real-time error messages and regex patterns
+- **Loading States**: Contextual loading indicators for geolocation, form submission, and data fetching
+- **Error Handling**: Comprehensive error boundaries with user-friendly feedback messages
+- **Performance**: Optimized rendering with Redux state management and component memoization
+- **Accessibility**: Semantic HTML, proper form labels, and keyboard navigation support
+- **Optimistic Updates**: Smooth UI updates with proper error rollback mechanisms
+- **Conditional Rendering**: Smart UI that adapts based on cart state, user status, and order progress
 
 ## 🚀 Deployment
 
